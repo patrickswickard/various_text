@@ -1,0 +1,97 @@
+What is a set?
+
+A set is just a collection of...stuff.  Objects.
+You can have an empty set.  You can have a set of numbers.
+You can have a set of other sets of stuff.
+You can take a union of sets.
+You can take an intersection of sets.
+Sets can have infinite numbers of objects.  Once infinity is in the mix, dangerous and surprising things start happening.  But you get used to it all pretty quickly.
+You can also start doing things with infinite numbers of sets. That gets dangerous and confusing really quickly.
+Finite unions and finite intersections of sets are pretty well-behaved.
+Countably infinite unions and intersections of sets less so.
+Uncountably infinite unions and intersections of sets and things get very spicy.
+
+What is a function?
+A function maps the elements of a set X (called the domain) to elements of the set Y (called the codomain or range).
+Every element x in the domain X maps to one element y of the codomain Y, f(x) = y.
+Functions can be injective or one-to-one, which means no two x's map to the same y.
+Functions can be surjective or onto, which means every element y of the codomain gets "hit" when you map things in x.  No y in Y gets left out.
+If a function is injective and surjective (one-to-one and onto) then it's a bijection.  And when that happens you can start talking about the inverse of a function.
+
+What is a topology?
+Remember in normal math/geometry where you talk about the actual distance between two points?  In topology, we're going to generalize that notion. We don't necessarily care about an actual distance, just an idea of things being "close".
+Much of this is sort of a wobbly geometry. Geometry on clay or rubber.  Geometry where you squish or stretch but don't break. And we do this with sets.
+In general topology you introduce the idea of open sets. The structure of these captures the idea of closeness.
+A topology T is when you take a set X and define which subsets of that set are open.
+This can be done in many ways but it must follow a few rules.
+The empty set is open.
+The entire set X is open.
+Unions of open sets are open.
+*Finite* intersections of open sets are open. (note infinite weirdness...)
+Once you've made these definitions, there are a LOT of observations you can make about different topologies and how to classify them, define them, etc. And you can reach out to other concepts from math elsewhere and introduce their analogues in this concept.
+
+This sounds hand-wavey and general.
+It is! But even with the definitions so far there is a lot of structural work that can be done. You can start looking at properties of various topologies based on their structures and substructures.
+You can define topologies in alternative ways rather than literally defining which sets are open.
+There's a lot that can be done before even starting to mess around with things where geometric visualization is necessary.
+And there's a lot to be done before even introducing the idea of metric spaces.
+
+What is a metric space?
+We're not going to talk about it, but it's basically introducing a distance function into topological sets. When you do this, things start to look more like the "open ball" or "open interval" that we're used to seeing, and the associated delta-epsilon arguments. But this is structure we don't necessarily want or need when we're dealing with this level of generality.
+Open balls and open intervals are good for intuition and understanding where everything fits. But careful not to over-rely on them.
+
+What is continuity of a function in topology?
+Remember how a function is just a mapping from one space to another with some extra rules? When X and Y have topologies defined on them (i.e. open sets) then we can define what it means to be a continuous function f: X->Y.
+The main idea is that for any open set in Y, the preimage of that set is an open set in X.
+That's it.
+As with all mathematical concepts, it's good to look at what it means when something fails to have a property.
+If an actual function f:X-Y fails to be continuous, then it is not the case that every preimage of an open set in Y is an open set in X. So you can find an open set in Y such that forming a set in X from the preimage gives a set in X that is NOT an open set in X.
+Note that the continuity of a function depends on the topologies defined on X and Y. A function may be continuous under one topology and fail to be continuous with another.
+
+No delta-epsilon stuff then?
+Nope, this is all very generalist at the start.  At the end of the day, topologies are just sets with open subsets defined on them that follow a bunch of rules. We start from there for maximal generality and build our way up.
+That said, a great many of our actual examples and motivation for theorems comes from stuff in the "real world". Or at least the "real" mathematical world.
+
+The real world, huh?
+Yup. In topology through the examples you are going to learn a lot of cool math facts! You'll learn how a coffee cup can be deformed into a torus and vice versa. You'll learn which knots can be untied, which chains can be unlinked, and all kinds of other magic tricks. A careless student will take a topology class and treat it like a bunch of cool math trivia interspersed with dull or handwavey proofs. But as with most math, what we're actually studying is the structure and tools that all these math facts fall out of. You're learning a tool, a way of thinking, a way of classifying things, a way of studying mathematical objects and structures.
+
+As with most math, when we have two objects with some structure we're usually interested in telling whether one is just the other with a different coat of paint...which leads us to:
+
+What is a homeomorphism?
+This is what everyone thinks of first for topology. You can take your clay coffee cop and stretch it to turn it into a donut.
+For a homeomorphism you need two topological spaces X and Y, sets with the concept of an open set.
+A homeomorphism is a function f:X->Y that maps stuff in X to stuff in Y.
+The function must fit the following conditions:
+1. f is a bijection, i.e. it is one-to-one and onto (injective an surjective).
+2. f(x) is continuous. In other words, open sets in Y have open sets in X as preimage.
+3. The inverse of f is continuous. Lots to unpack there. We know an inverse exists because it's a bijection. The inverse being continuous, when you drill down into it, means that if X is an open set in X then f(X) is an open set in Y.
+Note the related idea to continuity of a function being open. That just means that open sets are mapped to open sets.
+The usual idea of continuity is expressed as a function is continuous and its inverse is continuous. But unpacking our definition means that the function maps open sets to open sets and its inverse maps open sets to open sets.
+Two topological spaces are homeomorphic if a homeomorphism f exists between them.
+If two topological spaces are not homeomorphic then no homeomorphism exists between them.
+
+A function may fail to be a homeomorphism. Think of what it means for a function to fail at this. It must violate at least one of the conditions above.
+1. The function fails to be a bijection. It either isn't one-to-one or it isn't onto.  Doubling up is not allowed. Failing to cover all of Y is not allowed.
+2. The function f is not continuous. So there's some open set in Y whose preimage is not an open set in X.
+3. The inverse of f is not continuous. So there's some open set in X whose imageunder f is not an open set in Y.
+So either we're not one-to-one, not onto, or we are not preserving the structure of open sets.
+
+This compares pretty naturally to isomorphisms between groups (or other algebraic structures). You're not an isomorphism if you aren't 1-1 and onto. You're also not an isomorphism if group structure isn't respected.
+
+Groups also have homomorphisms, so at some point we may want to loosen this and study something that preserves structure but isn't necessarily one-to-one or not onto.
+
+In fact there is a concept called local homeomorphisms where we loosen condition one.
+We have to be a little wiggly here and introduce the idea of a neighborhood. For x in X.
+First let's look at the idea of a more specific kind of neighborhood called an open neighborhood. This is pretty natural. If U is an open set in X and x is an element of U then U is an open neighborhood of x.
+To generalize slightly (for some authors!) if x is an element of U and U is a subset of V then V is a neighborhood of x. This generalizes to sets that contain x and may not be open themselves but contain an open set that contains x.
+So a set X is locally homeomorphic to Y if every element of X has a neighborhood that is homeomorphic to an open subset of Y.
+That is a lot to unpack.
+Put another way, local homeomorphisms are functions f that are continuous, open, and *locally* injective.
+
+We're almost to covering spaces, which are a *special* kind of local homeomorphism. The full definition of covering space gets into "here there be dragons" territory.
+
+A covering space is a continuous map pi: X^hat -> X such that for every x in X there exists an open neighborhood Ux of x and a (dragons) discrete space Dx such that preimage of Ux = (disjoint union d in Dx) Vd and pi over Vd : Vd->Ux is a homeomorphism for every d in Dx.  The open sets Vd are sheets.
+
+In practice we're usually kinda dumbing this down so that the discrete space is either finite or countably infinite (Z). It's just likely that because of proof crap things break down when you try to get uncountably infinite unions of stuff.
+
+

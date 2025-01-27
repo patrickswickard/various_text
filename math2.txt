@@ -1,0 +1,48 @@
+Algebra review
+
+For study of topology we're going to run quickly into some concepts from algebra that it's good to revisit from the start.
+
+What is a function
+
+A function is a mapping from one set to another f:X->Y where every x in F gets mapped to a unique value in Y. At its root it's basically just a "table" that for each value in the domain X matches it with a corresponding value in the codomain Y.
+
+Some pitfalls
+
+Do not over-associate functions with formulas.  A formula may be a compact way to represent a function, but such a convenient formula may not exist.
+
+Also be careful not to assume that the function is going to "hit" every value of Y. For example the function may be a constant function, where it only hits one value in the codomain. For a function over X we may to be precise wish to speak of its image of X in Y, which is every value of Y that gets hit by the function over X.
+
+Injection, surjection, bijection
+
+An injective function (one-to-one) is a function where each x in X matches to a unique y in Y. In other words there are NOT any y values for which two different x values map to that y value. In other words the preimage of y is unique in X.
+
+A function is surjective if each value in the codomain is hit by the function. In other words for every y in Y, at least one value in X gets mapped there.
+
+A function is bijective (one-to-one and onto) if it is both injective and surjective. This means it has an inverse f-inv: Y->X.
+
+If a function is injective then it will be bijective over its image but not necessarily over the whole codomain.
+
+If a function is bijective then it has an inverse, which is why this quality is exciting.
+
+If f is a function and g is its inverse then f*g = g*f = 1.
+
+All these apply to functions over sets. We also sometimes wish to have functions over more complicated objects with more structure that respect the structure.
+
+A map h:X->Y where X and Y are groups is a homomorphism when the map h is a function and h(x1*x2) = h(x1)*h(x2) .  In this way, X and the map of its image in Y share structure.
+
+Don't get too excited and read too much into a homomorphism existing between X and Y and declare that this existence makes those groups "homomorphic" and assume too much of it, as if they have the same structure. You can always do something stupid like map all of X to the identity of Y, for example, and the special "homomorphism condition" above will hold.
+
+An endomorphism is when the domain and codomain are the same. Don't confuse this with epimorphisms (which are "onto").
+
+If a homomorphism is a bijection (one-to-one and onto) then it's an isomorphism, which is something to be excited about. It essentially means that X and Y have the same structure and it implies that an inverse exists for the homomorphism.
+
+Again, two useful ways to think of isomorphisms:
+1. inverse of the homomorphism exists
+2. X and Y have the "same" structure, i.e. Y is just X with a different coat of paint
+
+An automorphism is an endomorphism that is also a bijection. In other words it is a function h:X->X that is one-to-one and onto *itself*. One of these always exists (think of the identity function). If nontrivial ones exist then we have some sort of symmetry.
+
+The term kernel has a life outside of algebra, which is a bit confusing. But basically if you have a homomorphism then the kernel is all the stuff that maps to the identity. So for h:X->Y it's all the x values that map to the identity of Y.
+If a kernel is trivial (only the identity) then the homomorphism is one-to-one.
+In the other extreme the kernel could be the entire group if you mapped all of X to the identity of Y.
+The kernel can be viewed as a measure of the degree to which a homomorphism fails to be injective.
