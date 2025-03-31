@@ -46,3 +46,16 @@ The term kernel has a life outside of algebra, which is a bit confusing. But bas
 If a kernel is trivial (only the identity) then the homomorphism is one-to-one.
 In the other extreme the kernel could be the entire group if you mapped all of X to the identity of Y.
 The kernel can be viewed as a measure of the degree to which a homomorphism fails to be injective.
+
+Possibilities
+
+The kernel will be a subgroup/subobject.
+The image will be a subgroup/subobject.
+The kernel will be the entire group, the identity, or something in-between.
+The image will be the entire group, the identity, or something in-between.
+For an exact sequence this meeting of morphisms at G will be the same
+And this meeting will be
+The entire group
+Just the identity
+Or something in-between.
+Some of these cases are more interesting than others.
